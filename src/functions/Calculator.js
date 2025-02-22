@@ -7,8 +7,8 @@ app.http('Calculator', {
         context.log(`Http function processed request for url "${request.url}"`);
 
         const firstNumber = Number.parseInt(request.query.get('firstNumber'));
-        const secondNumber = Number.parseInt(request.query.get('SecondNumber'));
+        const secondNumber = Number.parseInt(request.query.get('secondNumber'));
 
-        return { Sum: firstNumber + secondNumber };
+        return { jsonBody : { Sum: firstNumber + secondNumber } };
     }
 });
